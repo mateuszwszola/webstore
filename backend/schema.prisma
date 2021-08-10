@@ -16,15 +16,10 @@ model User {
 }
 
 model ProductImage {
-  id                 String   @id @default(cuid())
-  photoUrl_filesize  Int?
-  photoUrl_extension String?
-  photoUrl_width     Int?
-  photoUrl_height    Int?
-  photoUrl_mode      String?
-  photoUrl_id        String?
-  altText            String?
-  product            Product? @relation("Product_photo")
+  id      String   @id @default(cuid())
+  photo   Json?
+  altText String?
+  product Product? @relation("Product_photo")
 }
 
 model Product {
