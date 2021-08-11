@@ -4,6 +4,7 @@ import {createAuth} from '@keystone-next/auth';
 import 'dotenv/config';
 
 import {lists} from './schema';
+import {insertSeedData} from "./seed-data";
 
 let sessionSecret = process.env.SESSION_SECRET;
 
@@ -48,7 +49,10 @@ export default withAuth(
             adapter: 'prisma_postgresql',
             url: process.env.DATABASE_URL || 'postgres://user:@localhost:5432/webstore',
             async onConnect(ctx) {
-                // TODO: Add data seeding
+                console.log('Connected to the database!');
+                if (process.argv.includes('--seed-data')) {
+                    await insertSeedData(ctx);
+                }
             }
         },
         ui: {
