@@ -1,7 +1,7 @@
 import {ReactNode} from "react";
-import NavItem from "./NavItem";
+import NavItem from "./nav/NavItem";
 import Nav from "./Nav";
-import Link from 'next/link';
+import NavLink from "./nav/NavLink";
 
 type LayoutProps = {
     children: ReactNode | ReactNode[]
@@ -9,34 +9,34 @@ type LayoutProps = {
 
 function Layout({children}: LayoutProps) {
     return (
-        <div className="bg-gray-50 min-h-screen h-screen flex flex-col justify-center items-center text-gray-900">
+        <div className="bg-gray-50 min-h-screen h-screen flex flex-col text-gray-900">
             <Nav>
                 <NavItem>
-                    <Link href="/">
+                    <NavLink href="/">
                         Home
-                    </Link>
+                    </NavLink>
                 </NavItem>
                 <NavItem>
-                    <Link href="/women">
+                    <NavLink href="/women">
                         Women
-                    </Link>
+                    </NavLink>
                 </NavItem>
                 <NavItem>
-                    <Link href="/">
+                    <NavLink href="/men">
                         Men
-                    </Link>
+                    </NavLink>
                 </NavItem>
                 <div className="flex-1"/>
                 <div className="flex divide-x">
                     <NavItem className="pr-4">
-                        <Link href="/signin">
+                        <NavLink href="/signin">
                             Sign in
-                        </Link>
+                        </NavLink>
                     </NavItem>
                     <NavItem className="pl-4">
-                        <Link href="/signup">
+                        <NavLink href="/signup">
                             Sign up
-                        </Link>
+                        </NavLink>
                     </NavItem>
                 </div>
             </Nav>

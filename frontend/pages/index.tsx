@@ -1,11 +1,13 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
+import {addApolloState, initializeApollo} from "../lib/apolloClient";
+import ProductsList, {ALL_PRODUCTS_QUERY} from "../components/Products";
 
 const Home: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Web Store</title>
+                <title>Welcome | Web Store</title>
                 <meta name="description" content="ECommerce Store"/>
             </Head>
 
@@ -18,35 +20,7 @@ const Home: NextPage = () => {
                     ECommerce Store
                 </p>
 
-                <div className="flex items-center justify-center flex-wrap w-full max-w-screen-md mt-12">
-                    <a href="#"
-                       className="m-4 p-6 text-left no-underline border border-solid border-gray-300 rounded transition ease-in w-5/12 hover:text-blue-500 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500">
-                        <h2>Product #1</h2>
-                        <p>Product #1 Description</p>
-                    </a>
-
-                    <a href="#"
-                       className="m-4 p-6 text-left no-underline border border-solid border-gray-300 rounded transition ease-in w-5/12 hover:text-blue-500 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500">
-                        <h2>Product #2</h2>
-                        <p>Product #2 Description</p>
-                    </a>
-
-                    <a
-                        href="#"
-                        className="m-4 p-6 text-left no-underline border border-solid border-gray-300 rounded transition ease-in w-5/12 hover:text-blue-500 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500">
-                        <h2>Product #3</h2>
-                        <p>Product #3 Description</p>
-                    </a>
-
-                    <a
-                        href="#"
-                        className="m-4 p-6 text-left no-underline border border-solid border-gray-300 rounded transition ease-in w-5/12 hover:text-blue-500 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500">
-                        <h2>Product #4</h2>
-                        <p>
-                            Product #4 Description
-                        </p>
-                    </a>
-                </div>
+                <ProductsList />
             </main>
 
             <footer className="text-center py-4">
@@ -54,6 +28,19 @@ const Home: NextPage = () => {
             </footer>
         </>
     )
+}
+
+export async function getStaticProps() {
+    const apolloClient = initializeApollo();
+
+    await apolloClient.query({
+        query: ALL_PRODUCTS_QUERY,
+    });
+
+    return addApolloState(apolloClient, {
+        props: {},
+        revalidate: 1,
+    })
 }
 
 export default Home
