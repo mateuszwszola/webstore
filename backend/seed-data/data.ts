@@ -3,7 +3,7 @@ export const products = [
         "name": "Straw Hat",
         "description": "Straw Hat great for summer!",
         "status": "AVAILABLE",
-        "price": 15000,
+        "price": 1500,
         "photo": {
             "id": "cks7ynnsn0851u6aox2tlnjvp",
         },
@@ -20,7 +20,7 @@ export const products = [
         "name": "Blue Jeans",
         "description": "Very comfortable blue jeans",
         "status": "AVAILABLE",
-        "price": 80000,
+        "price": 8000,
         "photo": {
             "id": "cks7yunb40271yzaosl7tatrg"
         },
@@ -34,7 +34,7 @@ export const products = [
         "name": "Nike Shoes",
         "description": "Shoes for walking",
         "status": "AVAILABLE",
-        "price": 99990,
+        "price": 9999,
         "photo": {
             "id": "cks7yv6nc0354yzaoi03h0oum"
         },
@@ -48,7 +48,7 @@ export const products = [
         "name": "Business Shirt",
         "description": "Classic white business shirt with a black tie",
         "status": "AVAILABLE",
-        "price": 50000,
+        "price": 5000,
         "photo": {
             "id": "cks7yvw630437yzaozdwthucl"
         },
@@ -62,7 +62,7 @@ export const products = [
         "name": "Light Sweater for women",
         "description": "Really comfortable sweater great for cool days",
         "status": "AVAILABLE",
-        "price": 30000,
+        "price": 3000,
         "photo": {
             "id": "cks7yw7xz0520yzao0mpfvhlf"
         },
@@ -76,7 +76,7 @@ export const products = [
         "name": "Basic T-Shirt",
         "description": "Basic slim-fit T-Shirt",
         "status": "AVAILABLE",
-        "price": 20000,
+        "price": 2000,
         "photo": {
             "id": "cks7ywk9k0603yzaok231aafd"
         },
@@ -90,7 +90,7 @@ export const products = [
         "name": "Women's Trousers",
         "description": "Loose pants",
         "status": "AVAILABLE",
-        "price": 49990,
+        "price": 4999,
         "photo": {
             "id": "cks7ywx5q0686yzao7d4im4ex"
         },
@@ -104,7 +104,7 @@ export const products = [
         "name": "Classic Vans Shoes",
         "description": "Old School Skateboarding Vans Shoes",
         "status": "AVAILABLE",
-        "price": 60000,
+        "price": 6000,
         "photo": {
             "id": "cks7yx8ss0769yzaonl9eie9p"
         },

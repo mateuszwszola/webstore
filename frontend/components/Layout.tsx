@@ -9,21 +9,11 @@ type LayoutProps = {
 
 function Layout({children}: LayoutProps) {
     return (
-        <div className="bg-gray-50 min-h-screen h-screen flex flex-col text-gray-900">
+        <div className="bg-gray-50 min-h-screen flex flex-col text-gray-900">
             <Nav>
                 <NavItem>
                     <NavLink href="/">
                         Home
-                    </NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/women">
-                        Women
-                    </NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/men">
-                        Men
                     </NavLink>
                 </NavItem>
                 <div className="flex-1"/>

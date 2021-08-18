@@ -11,16 +11,12 @@ const Home: NextPage = () => {
                 <meta name="description" content="ECommerce Store"/>
             </Head>
 
-            <main className="py-20 px-0 flex-1 flex flex-col justify-center items-center">
-                <h1 className="m-0 leading-normal text-6xl text-center">
-                    Welcome to Web Store
-                </h1>
+            <main className="py-20 px-2 w-full max-w-screen-xl mx-auto flex-1 flex flex-col">
+                <h2 className="mb-2 text-3xl font-semibold text-left">
+                    All Products
+                </h2>
 
-                <p className="text-center leading-normal text-2xl">
-                    ECommerce Store
-                </p>
-
-                <ProductsList />
+                <ProductsList/>
             </main>
 
             <footer className="text-center py-4">
