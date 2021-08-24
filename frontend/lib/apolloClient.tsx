@@ -1,10 +1,9 @@
 import {ApolloClient, HttpLink, InMemoryCache, NormalizedCacheObject,} from '@apollo/client';
-import {apiEndpoint} from "../config";
-// import {concatPagination} from "@apollo/client/utilities";
 import merge from 'deepmerge';
 import isEqual from 'lodash/isEqual';
 import {useMemo} from "react";
 import {AppProps} from "next/app";
+import {apiEndpoint} from "../config";
 
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__';
 
